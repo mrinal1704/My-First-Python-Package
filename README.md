@@ -7,12 +7,12 @@ This repo contains the files of a python package developed by me which automates
 This package helps in automating the following everyday tasks of data analysis:
 
       - Calculates the dimensions of the dataset
-			- Shows the basic info of the data
-			- Calculates number of Unique values
-			- Calculates percentage of null values
-			- Plots the bar chart for all categorical columns
-			- Plots the histogram for all numeric columns
-			- Makes a heatmap to show the null values
+      - Shows the basic info of the data
+      - Calculates number of Unique values
+      - Calculates percentage of null values
+      - Plots the bar chart for all categorical columns
+      - Plots the histogram for all numeric columns
+      - Makes a heatmap to show the null values
       
 ## How to install, import, and run
 - You can either go to the link: https://test.pypi.org/project/Mrinal/#files
