@@ -7,9 +7,7 @@ pd.set_option('display.max_columns', 500)
 pd.set_option('display.width', 1000)
 
 class Insights:
-
 	def __init__(self, data):
-		
 		self.data = data
 
 	def automate_analysis(self):
@@ -32,8 +30,6 @@ class Insights:
 				print("\n {} has {} unique values and {} percentage of null values \n".
 				      format(i,self.data[i].nunique(),round((self.data[i].isna().sum()/self.data.shape[0])*100,3)))
 		
-		print("\n**********************************************************\n")			    
-
 		print("The following are the plots for numeric columns: \n")
 		for i in self.data.columns:
 			if self.data[i].dtypes != object:
@@ -46,13 +42,8 @@ class Insights:
 				plt.show(plot2)
 				print("\n {} has {} unique values and {} percentage of null values \n".
 				      format(i,self.data[i].nunique(),round((self.data[i].isna().sum()/self.data.shape[0])*100,3)))	
-					    
-		print("\n**********************************************************\n")
 
 		print("The following is the heatmap to show the NA values in columns")
 		plt.figure(figsize=(12,9))
 		plot3 = sns.heatmap(self.data.isnull(), cbar=False)
 		plt.show(plot3)
-
-
-		print("\n***************************END****************************\n")
