@@ -6,34 +6,13 @@ pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 500)
 pd.set_option('display.width', 1000)
 
-
 class Insights:
-	""" Insights class for showing the basic 
-	insights in any dataset.
-
-	Attributes:
-		data (DataFrame) representing the given dataset 
-
-	"""
 
 	def __init__(self, data):
 		
 		self.data = data
 
-
 	def automate_analysis(self):
-		"""This function performs the following tasks:
-
-			- Calculates the dimensions of the dataset
-			- Shows the basic info of the data
-			- Calculates number of Unique values
-			- Calculates percentage of null values
-			- Plots the bar chart for all categorical columns
-			- Plots the histogram for all numeric columns
-			- Makes a heatmap to show the null values
-
-
-		"""
 		print("\n")
 		print("The Dataset has {} rows & {} columns \n".format(self.data.shape[0],self.data.shape[1]))
 		print("\n**********************************************************\n")
@@ -50,7 +29,8 @@ class Insights:
 				plt.yscale('log')
 				plt.xticks(fontsize=12)
 				plt.show(plot1)	
-				print("\n {} has {} unique values and {} percentage of null values \n".format(i,self.data[i].nunique(),round((self.data[i].isna().sum()/self.data.shape[0])*100,3)))
+				print("\n {} has {} unique values and {} percentage of null values \n".
+				      format(i,self.data[i].nunique(),round((self.data[i].isna().sum()/self.data.shape[0])*100,3)))
 		
 		print("\n**********************************************************\n")			    
 
@@ -64,7 +44,8 @@ class Insights:
 				plt.yscale('log')
 				plt.xticks(fontsize=12)
 				plt.show(plot2)
-				print("\n {} has {} unique values and {} percentage of null values \n".format(i,self.data[i].nunique(),round((self.data[i].isna().sum()/self.data.shape[0])*100,3)))	
+				print("\n {} has {} unique values and {} percentage of null values \n".
+				      format(i,self.data[i].nunique(),round((self.data[i].isna().sum()/self.data.shape[0])*100,3)))	
 					    
 		print("\n**********************************************************\n")
 
